@@ -1,0 +1,94 @@
+@font-face {
+  font-family: "Cairo";
+  src: url("./assets/fonts/Cairo/Cairo-SemiBold.ttf");
+}
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: "Cairo", Sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+header {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 0);
+  min-width: 80vw;
+  margin-top: 1rem;
+  color: #A1A2AA;
+  font-size: 11px;
+  font-weight: 400;
+}
+
+.h-sec-1 {
+  border-bottom: 1px solid rgba(122, 122, 122, 0.1);
+  width: 100vw;
+}
+
+.h-sec-2 {
+  border-bottom: 1px solid rgba(122, 122, 122, 0.1);
+  width: 100vw;
+}
+
+.h-sec-3 {
+  border-bottom: 1px solid rgba(122, 122, 122, 0.1);
+  width: 100vw;
+}
+
+.honor, .work-hours, .email {
+  text-align: center;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 0.3rem;
+}
+.row .phones {
+  order: 1;
+}
+.row .phones li {
+  list-style: none;
+  font-weight: bold;
+  color: #4C9997;
+}
+.row .socials {
+  order: 2;
+}
+.row .socials .social-item {
+  display: inline;
+  padding: 0 5px;
+  color: #4C9997;
+}
+
+.fw {
+  display: inline;
+  padding: 0 5px;
+  color: #4C9997;
+}
+
+.h-sec-2 {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.h-sec-2 .links li {
+  list-style: none;
+  display: inline;
+  margin: 0;
+  padding: 0;
+}
+.h-sec-2 .links li a {
+  text-decoration: none;
+  color: #A1A2AA;
+}
+.h-sec-2 * {
+  padding: 0 1rem;
+}
+
+/*# sourceMappingURL=header.css.map */

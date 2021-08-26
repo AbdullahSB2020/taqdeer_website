@@ -1,0 +1,16 @@
+{
+  "name": "cartech",
+  "version": "1.0.0",
+  "description": "",
+  "main": "services.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass": "sass --watch header.scss header.css"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "sass": "^1.38.1"
+  }
+}
