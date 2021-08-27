@@ -6,18 +6,19 @@
 $green_color: #4C9997 ;
 $gray_color : #A1A2AA ;
 
+$md-font: 15px ;
+ 
 @mixin fw(){
     display: inline;
     padding: 0 5px;
     color: $green_color ;
 }
-@mixin noLinkStyle(){
+@mixin noLinkStyle($color){
     text-decoration: none;
-    color: $gray_color;
+    color: $color;
 }
 @mixin center(){ 
     position: absolute;
-    // top: 50%;
     left: 50%;
     transform: translate(-50%,0);
 }
@@ -28,7 +29,6 @@ $gray_color : #A1A2AA ;
 body, html {
     margin: 0;
     padding: 0;
-    // background-color: #ccc; // remove afterwards
     font-family: "Cairo", Sans-serif;
 }
 * {
@@ -55,42 +55,58 @@ header {
     }
 }
 
-.mobile {
-    // background-color: bisque;
+.h-sec-1 {
     
-}
-.honor, .work-hours, .email {
-    text-align: center;
-    // margin-top: .3rem;
-}
-.row {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-    margin-top: .3rem;
-
-    .phones {
-        order: 1;
-        // background-color: burlywood;
-
-        li {
-            @include noListStyle();
-            font-weight: bold;
-            color: $green_color ;
-        }
+    .honor, .work-hours, .email {
+        text-align: center;
     }
-
-    .socials {
-        order: 2;
-        .social-item {
-            display: inline;
-            padding: 0 5px;
+    
+    .email a {
+        @include noLinkStyle($gray_color);
+        // background-color: #232323;
+        // text-decoration: none;
+        &:hover{
             color: $green_color;
+        }
+    }
 
+    .row {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        margin-top: .3rem;
+    
+        .phones {
+            order: 1;
+            a {
+                @include noLinkStyle($green_color);
+                &:hover {
+                    color: $gray_color ;
+                }
+            }
+            li {
+                @include noListStyle();
+                font-weight: bold;
+                color: $green_color ;
+            }
+        }
+    
+        .socials {
+            order: 2;
+            .social-item {
+                display: inline;
+                padding: 0 5px;
+                cursor: pointer;
+                color: $green_color;
+                &:hover {
+                    color: $gray_color
+                }
+            }
         }
     }
 }
+
  
 .fw {
     @include fw();
@@ -100,19 +116,77 @@ header {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    align-items: center;
+    .logo-1 {
 
-
-
+        display: flex;
+        flex-direction: column;
+        color: $green_color;
+        span {
+            font-size: .5rem;
+            font-weight: bolder;
+        }
+    }
     .links li {
         @include noListStyle();
         display: inline;
         margin: 0;
-        padding: 0;
+        padding: 0 .2rem ;
         a {
-            @include noLinkStyle();
+            @include noLinkStyle($gray_color);
+        }
+
+        &:hover {
+            border-bottom: 2px solid $green_color;
         }
     }
-    * {
+}
+
+
+.h-sec-3 { 
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    overflow: hidden;
+    .news {
         padding: 0 1rem ;
+        white-space: nowrap;
+        background-color: #fff;
+        z-index : 10 ;
+        color: $green_color ;
+        font-size: $md-font;
+    }
+    .news-ribbon {
+        padding: 0 10px;
+
+        white-space: nowrap;
+        z-index: 0 ;
+        
+        animation-name: textSliding;
+        animation-duration: 50s;
+        animation-iteration-count: infinite; // 
+        animation-timing-function: linear; // same speed
+
+        a {
+            @include noLinkStyle($gray_color);
+        }
+        .divider {
+            color: $green_color;
+            font-size: $md-font ;
+            margin: 0 1rem ; 
+        }
+        &:hover {
+            animation-play-state: paused;
+        }
+    }
+}
+
+@keyframes textSliding {
+    0% {
+        transform: translateX(-100%);
+    }
+
+    100% {
+        transform: translateX(100%);
     }
 }
