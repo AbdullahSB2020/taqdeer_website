@@ -1,17 +1,30 @@
-const service = {
+let service = {
     Header: {
         Section_1: {
             Email: `<span><a href="#"><i class="far fa-envelope fw"></i> info@cartech.sa</a></span>`,
-            WorkHours: `<i class="far fa-clock fw"></i> ساعات العمل من 8 صباحا - 8 مساء`,
-            Message: `معتمد من الهيئة السعودية للمقيمين المعتمدين`,
+            WorkHours: `<span><i class="far fa-clock fw"></i><span class='trn'>Working Hours from 8 AM - 8 PM</span></span>`,
+            Message: `<span class="trn">Certified by the Saudi Authority for Accredited Residents</span>`,
         },
         Section_2: {
-            Nav: {
-                Hello: "welcome to the site"
-            },
+            Link1: `<a href="#" class="trn">Home</a>`,
+            Link2: `<a href="#" class="trn">About Us</a>`,
+            Link3: `<a href="#" class="trn">Our Services</a>`,
+            Link4: `<a href="#" class="trn">Branches</a>`,
+            Link5: `<a href="#" class="trn">Employment</a>`,
         },
         Section_3: {
-            Maintainece: 'welcome to the site from abody'
+            NewsSection: `<span class='trn'>Latest News:</span>`, 
+            News1: `<a href="#">تأكد من التزام الموظفين التابعين لك ومشاركين في عملية تقدير تمسكهم بالميثاق</a>`,
+            News2: `<span class='divider'>...</span>`,
+            News3: `<a href="#">راعي أحوال الموظفين وحاول أن تجعلهم في أحسن بيئة ممكنة</a>`,
+            News4: `<span class='divider'>...</span>`,
+            News5: `<a href="#">البيئة المفضلة للعمل هي البيئة التي تنتج أفكار أفضل</a>`,
+            News6: ``,
+            News7: ``,
+            News8: ``,
+            News9: ``,
+            News10: ``,
+            
         },
     },
     Body: {
@@ -21,58 +34,18 @@ const service = {
 
     }
 }
-let bobo = {};
-let count = 0 ;
-function recursive(object,idBuilder){
-    console.log('=========================')
-    // count++ ;
-    // when object has nothing in it 
-    // console.log(object)
-    // console.log(idBuilder)
-    if(Object.keys(object).length == 0 || typeof(object) !== "object" ) {
-        // console.log('should remove')
-        // storage = storage.substring(0,storage.lastIndexOf('-'))
-        // storage = ""
-        return ;
-    }
-    // if(Object.keys(object).length == 0 ) return ;
 
+function recursive(object,idBuilder){
+    if(Object.keys(object).length == 0 || typeof(object) !== "object" ) return ;
     for(let child in object){
         let idPath = '';
-        console.log(`%c${child}`,'font-size:15px')
-        // now I want to build the id 
-        // console.log(idBuilder);
         idPath += `${idBuilder}${child}`;
-        // console.log(storage);
-        // console.log('================');
-        
-        /**
-         * when next element is not object he deletes the storage
-         * when HeaderSection_1 , now we're on email 
-         * I see its children are not object so 
-         * 
-         * problem when is not object he adds on it
-         */
-
         if(typeof object[child] !== 'object' ) {
-            console.log(`${idPath}: ${object[child]}`) // here I have one good id append element
             if(document.getElementById(idPath))
                 document.getElementById(idPath).innerHTML = object[child];
-                
+
             idPath = ''
         }
         recursive(object[child],idPath)
     }
-}
-
-window.onload = () => {
-    recursive(service,'')
-    // document.getElementById('HeaderSection_1Email').innerHTML = service.Header.Section_1.Email ;
-    // I have this object 
-    // the idea is
-    // put id's on elements with same object keys, 
-    // so when I iterate over the object I take its keys and form the key like this (header-section_1-email)
-    // and paste
-    // its content in the feild.
-
 }
