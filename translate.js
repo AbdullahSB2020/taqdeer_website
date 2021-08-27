@@ -44,6 +44,10 @@ const translateHeader = (language) => {
    $('.h-sec-2').translate({lang: language, t: headerTranslate})
    $('.h-sec-3').translate({lang: language, t: headerTranslate})
 }
+
+const footerTranslate = (language) => {
+    
+}
 const headerTranslate = {
     "Working Hours from 8 AM - 8 PM":{
         ar: "ساعات العمل من 8 صباحا - 8 مساء",
