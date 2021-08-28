@@ -80,18 +80,6 @@ header {
   font-weight: bold;
   color: #4C9997;
 }
-.h-sec-1 .row .socials {
-  order: 2;
-}
-.h-sec-1 .row .socials .social-item {
-  display: inline;
-  padding: 0 5px;
-  cursor: pointer;
-  color: #4C9997;
-}
-.h-sec-1 .row .socials .social-item:hover {
-  color: #A1A2AA;
-}
 @media (min-width: 898px) {
   .h-sec-1 {
     display: flex;
@@ -152,7 +140,7 @@ header {
   background-color: #fff;
   z-index: 10;
   color: #4C9997;
-  font-size: 15px;
+  font-size: 1rem;
 }
 .h-sec-3 .news-ribbon {
   padding: 0 10px;
@@ -169,7 +157,7 @@ header {
 }
 .h-sec-3 .news-ribbon .divider {
   color: #4C9997;
-  font-size: 15px;
+  font-size: 1rem;
   margin: 0 1rem;
 }
 .h-sec-3 .news-ribbon:hover {
@@ -193,7 +181,10 @@ footer .reserve-area {
   padding: 0.5rem 1rem;
   background-color: #4C9997;
   color: #fff;
-  font-size: 20px;
+  font-size: 1.5rem;
+}
+footer .reserve-area .service-letter {
+  width: 40%;
 }
 footer .reserve-area .appointment {
   white-space: nowrap;
@@ -205,7 +196,7 @@ footer .reserve-area .appointment button {
   border: none;
   cursor: pointer;
   padding: 0.5rem 1rem;
-  font-size: 10px;
+  font-size: 0.7rem;
   font-weight: bold;
   border-radius: 3px;
   transition: color 0.3s, background-color 0.3s;
@@ -216,31 +207,18 @@ footer .reserve-area .appointment button:hover {
 }
 footer .info {
   display: flex;
+  flex-wrap: wrap;
+}
+footer .info > div {
+  padding: 10px;
 }
 footer .info .title {
   color: #4C9997;
 }
-footer .info .center-info {
-  margin: 2rem 1rem;
-  font-size: 10px;
-  color: #7A7A7A;
-}
-footer .info .center-info ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-}
-footer .info .center-info ul a {
-  text-decoration: none;
-  color: #7A7A7A;
-  transition: color 0.5s;
-}
-footer .info .center-info ul a:hover {
-  color: #4C9997;
-}
 footer .info .center-contact {
+  min-width: 20%;
   margin: 2rem 1rem;
-  font-size: 10px;
+  font-size: 0.7rem;
   color: #7A7A7A;
 }
 footer .info .center-contact ul {
@@ -256,9 +234,29 @@ footer .info .center-contact ul a {
 footer .info .center-contact ul a:hover {
   color: #4C9997;
 }
-footer .info .center-service {
+footer .info .center-info {
+  min-width: 20%;
   margin: 2rem 1rem;
-  font-size: 10px;
+  font-size: 0.7rem;
+  color: #7A7A7A;
+}
+footer .info .center-info ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+footer .info .center-info ul a {
+  text-decoration: none;
+  color: #7A7A7A;
+  transition: color 0.5s;
+}
+footer .info .center-info ul a:hover {
+  color: #4C9997;
+}
+footer .info .center-service {
+  min-width: 20%;
+  margin: 2rem 1rem;
+  font-size: 0.7rem;
   color: #7A7A7A;
 }
 footer .info .center-service ul {
@@ -276,7 +274,7 @@ footer .info .center-service ul a:hover {
 }
 footer .info .center-photo {
   margin: 2rem 1rem;
-  font-size: 10px;
+  font-size: 0.7rem;
   color: #7A7A7A;
 }
 footer .info .center-photo ul {
@@ -297,14 +295,47 @@ footer .info .center-photo ul {
   flex-direction: row;
   flex-wrap: wrap;
 }
-footer .info .center-photo img {
+footer .info .center-photo ul li img {
   cursor: pointer;
   margin: 0 5px;
   border-radius: 5px;
   transition: filter 0.5s;
 }
-footer .info .center-photo img:hover {
+footer .info .center-photo ul li img:hover {
   filter: brightness(70%);
+}
+footer .copy-right {
+  border-top: 1px solid rgba(122, 122, 122, 0.1);
+  color: #4C9997;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+footer .copy-right > div {
+  padding: 2rem;
+}
+footer .copy-right .copy-right-text {
+  font-size: 0.7rem;
+  white-space: nowrap;
+  width: 40%;
+}
+
+/*
+=============================
+======== social icons =======
+=============================
+*/
+.socials {
+  order: 2;
+}
+.socials .social-item {
+  display: inline;
+  padding: 0 5px;
+  cursor: pointer;
+  color: #4C9997;
+}
+.socials .social-item:hover {
+  color: #A1A2AA;
 }
 
 /*# sourceMappingURL=header.css.map */

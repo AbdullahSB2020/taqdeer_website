@@ -12,13 +12,14 @@ $white_color: #fff;
 $black_color: #7A7A7A ;
 $green_color: #4C9997 ;
 $gray_color : #A1A2AA ;
+$border_color : rgba(122, 122, 122, 0.1) ;
 
 $desktop: 1024px ;
 $tablet: 898px;
 
-$sm-font: 10px ;
-$md-font: 15px ;
-$lg-font : 20px ;
+$sm-font: .7rem ;
+$md-font: 1rem ;
+$lg-font : 1.5rem ;
 
 $radius_percent: 3px ;
  
@@ -111,7 +112,7 @@ header {
 
 @for $i from 1 through 3 {
     .h-sec-#{$i} {
-        border-bottom: 1px solid rgba(122, 122, 122, 0.1) ;
+        border-bottom: 1px solid $border_color ;
         width: 100vw;
     }
 }
@@ -151,19 +152,6 @@ header {
                 @include noListStyle();
                 font-weight: bold;
                 color: $green_color ;
-            }
-        }
-    
-        .socials {
-            order: 2;
-            .social-item {
-                display: inline;
-                padding: 0 5px;
-                cursor: pointer;
-                color: $green_color;
-                &:hover {
-                    color: $gray_color
-                }
             }
         }
     }
@@ -268,9 +256,7 @@ header {
 // =================================
 
 footer {
-    * {
-        // @include noListStyle();
-    }
+   
     .reserve-area {
         display: flex;
         flex-direction: row;
@@ -281,7 +267,7 @@ footer {
         background-color: $green_color;
         
         .service-letter {
-            // max-width: 15em;
+            width: 40%;
         }
         .appointment {
             white-space: nowrap;
@@ -296,36 +282,91 @@ footer {
     }
     .info {
         display: flex;
+        flex-wrap: wrap;
+
+        & > div {
+            // flex-basis: 30%;
+            padding: 10px;
+            // background-color: yellow
+        }
         .title {
             color: $green_color;
         }
-        .center-info {
+        .center-contact {
+            min-width: 20%;
             @include footerList();
         }
-        .center-contact {
+        .center-info {
+            min-width: 20%;
+            // min-width: 10vw;
             @include footerList();
         }
         .center-service {
+            min-width: 20%;
+            // min-width: 20vw;
             @include footerList();
         }
         .center-photo {
+            // min-width: 20%;
+            // width: 25vw;
             @include footerList();
             ul {
                 display: flex;
+                // grid-template-columns: 1fr, 1fr, 1fr;
+                // grid-template-columns: repeat(5, 1fr);
+                // grid-gap: .5rem;
                 flex-direction: row;
                 flex-wrap: wrap;
             }
-            img {
-                cursor: pointer;
-                margin: 0 5px;
-                border-radius: 5px;
-                transition: filter .5s;
-                &:hover {
-                    filter: brightness(70%);
+            ul li {
+                // flex : 0 0 33.33333%;
+                img {
+                    cursor: pointer;
+                    margin: 0 5px;
+                    border-radius: 5px;
+                    transition: filter .5s;
+                    &:hover {
+                        filter: brightness(70%);
+                    }
                 }
             }
         }
         
 
+    }
+
+    .copy-right {
+        // background-color: yellowgreen;
+        border-top: 1px solid $border_color;
+        color: $green_color;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        & > div {
+            padding: 2rem ;
+        }
+        .copy-right-text {
+            font-size: $sm-font;
+            white-space: nowrap;
+            width: 40%;
+        }
+    }
+}
+
+/*
+=============================
+======== social icons =======
+=============================
+*/
+.socials {
+    order: 2;
+    .social-item {
+        display: inline;
+        padding: 0 5px;
+        cursor: pointer;
+        color: $green_color;
+        &:hover {
+            color: $gray_color
+        }
     }
 }
