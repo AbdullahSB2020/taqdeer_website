@@ -201,7 +201,7 @@ footer .reserve-area .appointment {
 }
 footer .reserve-area .appointment button {
   background-color: #fff;
-  color: #333;
+  color: #7A7A7A;
   border: none;
   cursor: pointer;
   padding: 0.5rem 1rem;
@@ -212,22 +212,99 @@ footer .reserve-area .appointment button {
 }
 footer .reserve-area .appointment button:hover {
   color: #fff;
-  background-color: #333;
+  background-color: #7A7A7A;
 }
 footer .info {
   display: flex;
 }
-footer .info .center-info {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background-color: green;
-}
-footer .info .center-info li {
-  list-style: none;
-}
 footer .info .title {
   color: #4C9997;
+}
+footer .info .center-info {
+  margin: 2rem 1rem;
+  font-size: 10px;
+  color: #7A7A7A;
+}
+footer .info .center-info ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+footer .info .center-info ul a {
+  text-decoration: none;
+  color: #7A7A7A;
+  transition: color 0.5s;
+}
+footer .info .center-info ul a:hover {
+  color: #4C9997;
+}
+footer .info .center-contact {
+  margin: 2rem 1rem;
+  font-size: 10px;
+  color: #7A7A7A;
+}
+footer .info .center-contact ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+footer .info .center-contact ul a {
+  text-decoration: none;
+  color: #7A7A7A;
+  transition: color 0.5s;
+}
+footer .info .center-contact ul a:hover {
+  color: #4C9997;
+}
+footer .info .center-service {
+  margin: 2rem 1rem;
+  font-size: 10px;
+  color: #7A7A7A;
+}
+footer .info .center-service ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+footer .info .center-service ul a {
+  text-decoration: none;
+  color: #7A7A7A;
+  transition: color 0.5s;
+}
+footer .info .center-service ul a:hover {
+  color: #4C9997;
+}
+footer .info .center-photo {
+  margin: 2rem 1rem;
+  font-size: 10px;
+  color: #7A7A7A;
+}
+footer .info .center-photo ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+footer .info .center-photo ul a {
+  text-decoration: none;
+  color: #7A7A7A;
+  transition: color 0.5s;
+}
+footer .info .center-photo ul a:hover {
+  color: #4C9997;
+}
+footer .info .center-photo ul {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+footer .info .center-photo img {
+  cursor: pointer;
+  margin: 0 5px;
+  border-radius: 5px;
+  transition: filter 0.5s;
+}
+footer .info .center-photo img:hover {
+  filter: brightness(70%);
 }
 
 /*# sourceMappingURL=header.css.map */

@@ -9,7 +9,7 @@
 =============================
 */
 $white_color: #fff;
-$black_color: #333 ;
+$black_color: #7A7A7A ;
 $green_color: #4C9997 ;
 $gray_color : #A1A2AA ;
 
@@ -31,6 +31,25 @@ $radius_percent: 3px ;
     text-decoration: none;
     color: $color;
 }
+
+@mixin footerList(){
+    margin: 2rem 1rem ;
+    font-size: $sm-font;
+    color: $black_color;
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        a {
+            @include noLinkStyle($black_color);
+            transition: color .5s;
+            &:hover {
+                color: $green_color;
+            }
+        }
+    }
+}
+
 @mixin center(){ 
     // position: fixed;
     left: 50%;
@@ -162,7 +181,6 @@ header {
     }
 }
 
- 
 .fw {
     @include fw();
 }
@@ -277,21 +295,37 @@ footer {
         font-size: $lg-font;
     }
     .info {
-        .center-info {
-            display: flex;
-            flex-direction: column;
-            
-            align-items: center;
-            background-color: green;
-            li {
-                @include noListStyle();
-
-            }
-        }
         display: flex;
         .title {
             color: $green_color;
         }
+        .center-info {
+            @include footerList();
+        }
+        .center-contact {
+            @include footerList();
+        }
+        .center-service {
+            @include footerList();
+        }
+        .center-photo {
+            @include footerList();
+            ul {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+            }
+            img {
+                cursor: pointer;
+                margin: 0 5px;
+                border-radius: 5px;
+                transition: filter .5s;
+                &:hover {
+                    filter: brightness(70%);
+                }
+            }
+        }
+        
 
     }
 }
