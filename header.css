@@ -194,10 +194,10 @@ header {
   background-image: url(/assets/images/image-1-tran.png);
   background-position: center center;
   background-size: cover;
+  padding: 5rem 0;
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 5rem 0;
   justify-content: center;
 }
 .body .content > * {
@@ -220,7 +220,7 @@ header {
   flex-direction: column;
   flex-wrap: wrap;
   margin-bottom: 1rem;
-  min-width: 40%;
+  min-width: 40px;
 }
 .body .content .request-outer .request-inner .form-group .form-label {
   color: #A1A2AA;
@@ -235,6 +235,21 @@ header {
   border: none;
   background-color: #fafafa;
   padding: 1rem 1.5rem;
+}
+.body .content .request-outer .request-inner button {
+  background-color: #4C9997;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  font-size: 0.7rem;
+  font-weight: bold;
+  border-radius: 3px;
+  transition: color 0.3s, background-color 0.3s;
+}
+.body .content .request-outer .request-inner button:hover {
+  color: #4C9997;
+  background-color: #fff;
 }
 .body .content .steps {
   display: flex;
@@ -304,16 +319,15 @@ footer .reserve-area .appointment button:hover {
 }
 footer .info {
   display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
   flex-wrap: wrap;
-}
-footer .info > div {
-  padding: 10px;
 }
 footer .info .title {
   color: #4C9997;
 }
 footer .info .center-contact {
-  min-width: 20%;
   margin: 2rem 1rem;
   font-size: 0.7rem;
   color: #7A7A7A;
@@ -332,7 +346,6 @@ footer .info .center-contact ul a:hover {
   color: #4C9997;
 }
 footer .info .center-info {
-  min-width: 20%;
   margin: 2rem 1rem;
   font-size: 0.7rem;
   color: #7A7A7A;
@@ -351,7 +364,6 @@ footer .info .center-info ul a:hover {
   color: #4C9997;
 }
 footer .info .center-service {
-  min-width: 20%;
   margin: 2rem 1rem;
   font-size: 0.7rem;
   color: #7A7A7A;
