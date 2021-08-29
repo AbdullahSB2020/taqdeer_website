@@ -1,15 +1,19 @@
 const mobile = `0112414088`;
 const whatsMobile = `0112414088`;
-const email = ``;
+const email = `info@cartech.sa`;
 
 let service = {
     Header: {
         Section_1: {
-            Email: `<span><a href="#"><i class="far fa-envelope fw"></i> info@cartech.sa</a></span>`,
-            WorkHours: `<span><i class="far fa-clock fw"></i><span class='trn'>Working Hours from 8 AM - 8 PM</span></span>`,
             Message: `<span class="trn">Certified by the Saudi Authority for Accredited Residents</span>`,
+            Email: `<span><a href="#"><i class="far fa-envelope fw"></i> ${email}</a></span>`,
+            WorkHours: `<span><i class="far fa-clock fw"></i><span class='trn'>Working Hours from 8 AM - 8 PM</span></span>`,
+            Phones_1: `<span><a href="#"><i class="fas fa-phone fw"></i> ${mobile}</a></span>`,
+            Phones_2: `<span><a href="#"><i class="fab fa-whatsapp fw"></i> ${whatsMobile}</a></span>`,
         },
         Section_2: {
+            CompanyLogo: `<img src="./assets/images/logo-1.png" alt="" width="130">`,
+            CompanyDesc: `<span class="trn">Cartech Company for Vehicle Services</span>`,
             Link1: `<a href="#" class="trn">Home</a>`,
             Link2: `<a href="#" class="trn">About Us</a>`,
             Link3: `<a href="#" class="trn">Our Services</a>`,
@@ -45,9 +49,9 @@ let service = {
                 Title: `<img src="/assets/images/logo-1.png" width="160" alt="">`,
                 L1:`<span class="trn">Cartech Center for Vehicle Damage Estimation</span>`,
                 L2:`<span class="trn">Mohamed Ben Alalaa St., Al Riyadh, Al Manar District</span>`,
-                L3:`<span><span class="trn">Phone: </span><a href="tel:#">0112414088</a></span>`,
-                L4:`<span><i class="fab fa-whatsapp fw"></i><a href="#">0112414088</a></span>`,
-                L5:`<span><span class="trn">Email Address: </span><a href="mailto:#">info@cartech.sa</a></span>`,
+                L3:`<span><span class="trn">Phone: </span><a href="tel:#">${mobile}</a></span>`,
+                L4:`<span><i class="fab fa-whatsapp fw"></i><a href="#">${whatsMobile}</a></span>`,
+                L5:`<span><span class="trn">Email Address: </span><a href="mailto:#">${email}</a></span>`,
                 L6:``,
                 L7:``,
             },
@@ -77,7 +81,7 @@ let service = {
     }
 }
 
-function recursive(object,idBuilder){
+function copyContentIntoDom(object,idBuilder){
     if(Object.keys(object).length == 0 || typeof(object) !== "object" ) return ;
     for(let child in object){
         let idPath = '';
@@ -88,6 +92,6 @@ function recursive(object,idBuilder){
 
             idPath = ''
         }
-        recursive(object[child],idPath)
+        copyContentIntoDom(object[child],idPath)
     }
 }

@@ -5,7 +5,7 @@ window.onload = () => {
     langBtn.onclick = (e) => {
         translateAll();
     }
-    recursive(service, '')
+    copyContentIntoDom(service, '')
     translateAll();
 }
 
@@ -77,8 +77,8 @@ const headerTranslate = {
     "Latest News:":{
         ar: "أحدث الأخبار :"
     },
-    "":{
-        ar: ""
+    "Cartech Company for Vehicle Services":{
+        ar: "شركة تقنية السيارة لخدمات السيارات"
     },
     "":{
         ar: ""
