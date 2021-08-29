@@ -129,95 +129,28 @@ const footerTranslate = {
     "Contact":{
         ar: "تواصل معنا"
     },
-    "":{
+    "Cartech Services":{
         ar: "خدمات المركز"
     },
-    "":{
+    "Estimate Vehicle Damage":{
         ar: "تقدير أضرار المركبات"
     },
-    "":{
+    "Electronic Claim":{
         ar: "المطالبة الإلكترونية"
     },
-    "":{
+    "Moving Estimation":{
         ar: "التقدير المتنقل"
     },
-    "":{
+    "Vehicle Safety Check":{
         ar: "فحص سلامة المركبة"
     },
-    "":{
+    "All Services":{
         ar: "جميع الخدمات"
     },
-    "":{
+    "CARTECH GALLERY":{
         ar: "صور المركز"
     },
-    "All Rights Reserved to CarTech Company Branch for Vehicle Services 2021":{
-        ar: ""
+    "All Rights Reserved to CarTech Company Branch for Vehicle Services 2021": {
+        ar: "جميع الحقوق محفوظة لفرع شركة تقنيه السيارة لخدمات السيارات 2021"
     },
-    "":{
-        ar: ""
-    },
-    "":{
-        ar: ""
-    },
-    "":{
-        ar: ""
-    },
-    "":{
-        ar: ""
-    },
-    "":{
-        ar: ""
-    },
-    "":{
-        ar: ""
-    },
-    "":{
-        ar: ""
-    },
-    "":{
-        ar: ""
-    },
-    "":{
-        ar: ""
-    },
-    "":{
-        ar: ""
-    },
-    "":{
-        ar: ""
-    },
-    "":{
-        ar: ""
-    },
-    "":{
-        ar: ""
-    },
-    "":{
-        ar: ""
-    },
-    "":{
-        ar: ""
-    },
-    "":{
-        ar: ""
-    },
-    "":{
-        ar: ""
-    },
-    "":{
-        ar: ""
-    },
-    "":{
-        ar: ""
-    },
-    "":{
-        ar: ""
-    },
-    "":{
-        ar: ""
-    },
-    "":{
-        ar: ""
-    },
-    
 }
