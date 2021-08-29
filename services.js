@@ -1,3 +1,4 @@
+const mobile = '0504546787'
 let service = {
     Header: {
         Section_1: {

@@ -12,6 +12,7 @@ $white_color: #fff;
 $black_color: #7A7A7A ;
 $green_color: #4C9997 ;
 $gray_color : #A1A2AA ;
+$input_bg: #fafafa ;
 $border_color : rgba(122, 122, 122, 0.1) ;
 
 $desktop: 1024px ;
@@ -75,6 +76,32 @@ $radius_percent: 3px ;
     }
 }
 
+@mixin inputs($widthPercent) {
+    .form-group {
+        margin: 0 10px;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        margin-bottom: 1rem;
+        min-width: $widthPercent;
+        
+        .form-label {
+            color: $gray_color;
+            &:after {
+                content: "*";
+                color: red;
+                padding: 0 .2em;
+            }
+        }
+        .form-input {
+            border-radius: $radius_percent;
+            border: none;
+            background-color: $input_bg; // input_bg
+            padding: 1rem 1.5rem;
+        }  
+    }
+}
+
 /*
 ================================
 ====== responsiveness ==========
@@ -92,8 +119,12 @@ body, html {
     padding: 0;
     font-family: "Cairo", Sans-serif;
 }
-* {
+* , ::before,::after {
     box-sizing: border-box;
+}
+
+p {
+    color: $gray_color;
 }
 // =================================
 // ========= header sytles =========
@@ -252,6 +283,109 @@ header {
 }
 
 // =================================
+// ========= body sytles =========
+// =================================
+.body {
+    .subject-container {
+        
+        color: $white_color;
+        min-height: 10vh;
+        padding: 2rem 0;
+        background-color: transparent;
+        background-image: linear-gradient(130deg , $green_color 71%, $green_color 97%);
+        .subject-content {
+            // padding-top: 2rem;
+            text-align: center;
+        }
+        .subject-background {
+            // position: fixed;
+            width: calc(260% + 1.3px);
+            // height: 120px;
+            transform: translateX(-50%) rotateY(180deg);
+        }
+    }
+    .content {
+        background-image: url(/assets/images/image-1-tran.png);
+        background-position: center center;
+        background-size: cover;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 5rem 0;
+        justify-content: center;
+        & > * {
+            flex-basis: 100%;
+        }
+        // REQUEST STYLE
+        .request-outer {
+            // margin: 0 10px;
+            background-color: #ffffff;
+            // height: 30vh;
+            
+            border-radius: $radius_percent;
+            box-shadow: 0 0 30px 0 rgba(0, 0, 0,.5);
+            
+            
+            .request-inner {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: center;
+                // margin: 1rem 1.5rem;
+                @include inputs(40%);
+                // @include inputs2(90%);
+            }
+        }
+
+        // ORDER STEPS STYLE
+        .steps {
+            // width: 50%;
+            // opacity: 1 ;
+            // margin: 0 5rem;
+            display: flex;
+            flex-direction: column;
+
+            .step {
+                display: flex;
+                flex-direction: row;
+                // justify-content: space-evenly;
+                align-items: center;
+                .order-num {
+                    // flex-basis: 33.3333%;
+                    // flex: 0 0 33.33333%;
+                    color: $green_color;
+                    font-size: 2rem;
+                    padding: 0 1rem;
+                    padding-bottom: 1rem;
+
+                }
+                .order-img {
+                    // flex: 0 0 33.33333%;
+
+                }
+                .order-desc {
+                    flex: 0 0 40%;
+                    margin: 0 1rem;
+                    padding-bottom: 2rem;
+                    h4 {
+                        color: $green_color;
+                    }
+                    img {
+                        margin: 0;
+                        padding: 0;
+                    }
+                }
+            }
+        }
+        @include desktop(){
+            flex-direction: row;
+        }
+    }
+}
+
+
+// =================================
 // ========= footer sytles =========
 // =================================
 
@@ -312,9 +446,6 @@ footer {
             @include footerList();
             ul {
                 display: flex;
-                // grid-template-columns: 1fr, 1fr, 1fr;
-                // grid-template-columns: repeat(5, 1fr);
-                // grid-gap: .5rem;
                 flex-direction: row;
                 flex-wrap: wrap;
             }
@@ -366,7 +497,7 @@ footer {
         cursor: pointer;
         color: $green_color;
         &:hover {
-            color: $gray_color
+            color: $gray_color;
         }
     }
 }

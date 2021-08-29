@@ -18,8 +18,12 @@ body, html {
   font-family: "Cairo", Sans-serif;
 }
 
-* {
+*, ::before, ::after {
   box-sizing: border-box;
+}
+
+p {
+  color: #A1A2AA;
 }
 
 header {
@@ -172,6 +176,99 @@ header {
     transform: translateX(100%);
   }
 }
+.body .subject-container {
+  color: #fff;
+  min-height: 10vh;
+  padding: 2rem 0;
+  background-color: transparent;
+  background-image: linear-gradient(130deg, #4C9997 71%, #4C9997 97%);
+}
+.body .subject-container .subject-content {
+  text-align: center;
+}
+.body .subject-container .subject-background {
+  width: calc(260% + 1.3px);
+  transform: translateX(-50%) rotateY(180deg);
+}
+.body .content {
+  background-image: url(/assets/images/image-1-tran.png);
+  background-position: center center;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 5rem 0;
+  justify-content: center;
+}
+.body .content > * {
+  flex-basis: 100%;
+}
+.body .content .request-outer {
+  background-color: #ffffff;
+  border-radius: 3px;
+  box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.5);
+}
+.body .content .request-outer .request-inner {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.body .content .request-outer .request-inner .form-group {
+  margin: 0 10px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
+  min-width: 40%;
+}
+.body .content .request-outer .request-inner .form-group .form-label {
+  color: #A1A2AA;
+}
+.body .content .request-outer .request-inner .form-group .form-label:after {
+  content: "*";
+  color: red;
+  padding: 0 0.2em;
+}
+.body .content .request-outer .request-inner .form-group .form-input {
+  border-radius: 3px;
+  border: none;
+  background-color: #fafafa;
+  padding: 1rem 1.5rem;
+}
+.body .content .steps {
+  display: flex;
+  flex-direction: column;
+}
+.body .content .steps .step {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.body .content .steps .step .order-num {
+  color: #4C9997;
+  font-size: 2rem;
+  padding: 0 1rem;
+  padding-bottom: 1rem;
+}
+.body .content .steps .step .order-desc {
+  flex: 0 0 40%;
+  margin: 0 1rem;
+  padding-bottom: 2rem;
+}
+.body .content .steps .step .order-desc h4 {
+  color: #4C9997;
+}
+.body .content .steps .step .order-desc img {
+  margin: 0;
+  padding: 0;
+}
+@media (min-width: 898px) {
+  .body .content {
+    flex-direction: row;
+  }
+}
+
 footer .reserve-area {
   display: flex;
   flex-direction: row;
