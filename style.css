@@ -26,6 +26,10 @@ p {
   color: #A1A2AA;
 }
 
+button {
+  font-family: "Cairo", Sans-serif;
+}
+
 header {
   left: 50%;
   transform: translateX(-50%, 0);
@@ -218,7 +222,6 @@ header {
   margin: 0 10px;
   display: flex;
   flex-direction: column;
-  flex-wrap: wrap;
   margin-bottom: 1rem;
   min-width: 40px;
 }
@@ -242,7 +245,7 @@ header {
   border: none;
   cursor: pointer;
   padding: 0.5rem 1rem;
-  font-size: 0.7rem;
+  font-size: 0.9rem;
   font-weight: bold;
   border-radius: 3px;
   transition: color 0.3s, background-color 0.3s;
@@ -308,7 +311,7 @@ footer .reserve-area .appointment button {
   border: none;
   cursor: pointer;
   padding: 0.5rem 1rem;
-  font-size: 0.7rem;
+  font-size: 0.9rem;
   font-weight: bold;
   border-radius: 3px;
   transition: color 0.3s, background-color 0.3s;
@@ -329,7 +332,7 @@ footer .info .title {
 }
 footer .info .center-contact {
   margin: 2rem 1rem;
-  font-size: 0.7rem;
+  font-size: 0.9rem;
   color: #7A7A7A;
 }
 footer .info .center-contact ul {
@@ -347,7 +350,7 @@ footer .info .center-contact ul a:hover {
 }
 footer .info .center-info {
   margin: 2rem 1rem;
-  font-size: 0.7rem;
+  font-size: 0.9rem;
   color: #7A7A7A;
 }
 footer .info .center-info ul {
@@ -365,7 +368,7 @@ footer .info .center-info ul a:hover {
 }
 footer .info .center-service {
   margin: 2rem 1rem;
-  font-size: 0.7rem;
+  font-size: 0.9rem;
   color: #7A7A7A;
 }
 footer .info .center-service ul {
@@ -383,7 +386,7 @@ footer .info .center-service ul a:hover {
 }
 footer .info .center-photo {
   margin: 2rem 1rem;
-  font-size: 0.7rem;
+  font-size: 0.9rem;
   color: #7A7A7A;
 }
 footer .info .center-photo ul {
@@ -424,7 +427,7 @@ footer .copy-right > div {
   padding: 2rem;
 }
 footer .copy-right .copy-right-text {
-  font-size: 0.7rem;
+  font-size: 0.9rem;
   white-space: nowrap;
   width: 40%;
 }
@@ -443,8 +446,11 @@ footer .copy-right .copy-right-text {
   cursor: pointer;
   color: #4C9997;
 }
-.socials .social-item:hover {
+.socials .social-item a {
+  color: #4C9997;
+}
+.socials .social-item a:hover {
   color: #A1A2AA;
 }
 
-/*# sourceMappingURL=header.css.map */
+/*# sourceMappingURL=style.css.map */

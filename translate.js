@@ -5,7 +5,7 @@ window.onload = () => {
     langBtn.onclick = (e) => {
         translateAll();
     }
-    copyContentIntoDom(service, '')
+    copyContentIntoDom(content, '')
     translateAll();
 }
 

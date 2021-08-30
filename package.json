@@ -5,7 +5,7 @@
   "main": "services.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "sass": "sass --watch header.scss header.css"
+    "sass": "sass --watch style.scss style.css"
   },
   "keywords": [],
   "author": "",

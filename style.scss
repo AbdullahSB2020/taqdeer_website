@@ -18,7 +18,7 @@ $border_color : rgba(122, 122, 122, 0.1) ;
 $desktop: 1024px ;
 $tablet: 898px;
 
-$sm-font: .7rem ;
+$sm-font: .9rem ;
 $md-font: 1rem ;
 $lg-font : 1.5rem ;
 
@@ -81,10 +81,10 @@ $radius_percent: 3px ;
         margin: 0 10px;
         display: flex;
         flex-direction: column;
-        flex-wrap: wrap;
+        // flex-wrap: wrap;
         margin-bottom: 1rem;
         min-width: $widthPercent;
-        
+        // & > * {}
         .form-label {
             color: $gray_color;
             &:after {
@@ -126,6 +126,9 @@ body, html {
 
 p {
     color: $gray_color;
+}
+button {
+    font-family: "Cairo", Sans-serif;
 }
 // =================================
 // ========= header sytles =========
@@ -277,7 +280,6 @@ header {
     0% {
         transform: translateX(-100%);
     }
-
     100% {
         transform: translateX(100%);
     }
@@ -503,12 +505,19 @@ footer {
 .socials {
     order: 2;
     .social-item {
+        
         display: inline;
         padding: 0 5px;
         cursor: pointer;
         color: $green_color;
-        &:hover {
-            color: $gray_color;
+        // &:hover {
+        //     color: $gray_color;
+        // }
+        a {
+            color: $green_color;
+            &:hover {
+                color: $gray_color;
+            }
         }
     }
 }
