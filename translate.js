@@ -194,32 +194,32 @@ const bodyTranslate = {
     "Report and Send to Insurance Company":{
         ar: "إصدار التقرير و إرساله لشركات التأمين"
     },
-    "":{
-        ar: ""
+    "Recognition Services":{
+        ar: "للتقدير"
     },
-    "":{
-        ar: ""
+    "We offer comprehensive and guaranteed":{
+        ar: `نقدم لك خدمات شاملة ومضمونة`
     },
-    "":{
-        ar: ""
+    "We provide our customers with comprehensive and distinctive services that are professionally implemented to keep pace Saudi market aspirations and customer needs":{
+        ar: "نوفّر لعملائنا خدمات شاملة ومميزة يتم تنفيذها باحترافية عالية لتواكب تطلعات السوق السعودي وتلبي احتياجات ومتطلبات العملاء"
     },
-    "":{
-        ar: ""
+    "Moving Estimation":{
+        ar: "التقدير المتنقل"
     },
-    "":{
-        ar: ""
+    "Electronic Claim":{
+        ar: "المطالبة الإلكترونية"
     },
-    "":{
-        ar: ""
+    "Estimate Vehicle Damage":{
+        ar: "تقدير أضرار المركبة"
     },
-    "":{
-        ar: ""
+    "Vehicle Safety Check":{
+        ar: "فحص سلامة المركبة"
     },
-    "":{
-        ar: ""
+    "Request Estimation":{
+        ar: "طلب خدمة تقدير"
     },
-    "":{
-        ar: ""
+    "All Services":{
+        ar: "جميع الخدمات"
     },
      
 }
