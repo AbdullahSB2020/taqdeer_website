@@ -23,7 +23,7 @@ body, html {
 }
 
 p {
-  color: #A1A2AA;
+  color: #7A7A7A;
 }
 
 button {
@@ -61,7 +61,7 @@ header {
 }
 .h-sec-1 .email a {
   text-decoration: none;
-  color: #A1A2AA;
+  color: #7A7A7A;
 }
 .h-sec-1 .email a:hover {
   color: #4C9997;
@@ -81,7 +81,7 @@ header {
   color: #4C9997;
 }
 .h-sec-1 .row .phones a:hover {
-  color: #A1A2AA;
+  color: #7A7A7A;
 }
 .h-sec-1 .row .phones li {
   list-style: none;
@@ -130,7 +130,7 @@ header {
 }
 .h-sec-2 .links li a {
   text-decoration: none;
-  color: #A1A2AA;
+  color: #7A7A7A;
 }
 .h-sec-2 .links li:hover {
   border-bottom: 2px solid #4C9997;
@@ -161,7 +161,7 @@ header {
 }
 .h-sec-3 .news-ribbon a {
   text-decoration: none;
-  color: #A1A2AA;
+  color: #7A7A7A;
 }
 .h-sec-3 .news-ribbon .divider {
   color: #4C9997;
@@ -226,7 +226,7 @@ header {
   min-width: 40px;
 }
 .body .content .request-outer .request-inner .form-group .form-label {
-  color: #A1A2AA;
+  color: #7A7A7A;
 }
 .body .content .request-outer .request-inner .form-group .form-label:after {
   content: "*";
@@ -243,6 +243,7 @@ header {
   background-color: #4C9997;
   color: #fff;
   border: none;
+  border-width: 1px;
   cursor: pointer;
   padding: 0.5rem 1rem;
   font-size: 0.9rem;
@@ -251,6 +252,7 @@ header {
   transition: color 0.3s, background-color 0.3s;
 }
 .body .content .request-outer .request-inner button:hover {
+  border: 1px solid #4C9997;
   color: #4C9997;
   background-color: #fff;
 }
@@ -307,8 +309,9 @@ footer .reserve-area .appointment {
 }
 footer .reserve-area .appointment button {
   background-color: #fff;
-  color: #7A7A7A;
+  color: #333645;
   border: none;
+  border-width: 1px;
   cursor: pointer;
   padding: 0.5rem 1rem;
   font-size: 0.9rem;
@@ -318,7 +321,7 @@ footer .reserve-area .appointment button {
 }
 footer .reserve-area .appointment button:hover {
   color: #fff;
-  background-color: #7A7A7A;
+  background-color: #333645;
 }
 footer .info {
   display: flex;
@@ -450,7 +453,7 @@ footer .copy-right .copy-right-text {
   color: #4C9997;
 }
 .socials .social-item a:hover {
-  color: #A1A2AA;
+  color: #7A7A7A;
 }
 
 /*# sourceMappingURL=style.css.map */

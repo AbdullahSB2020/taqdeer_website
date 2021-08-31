@@ -8,12 +8,16 @@
 ======== Variables ==========
 =============================
 */
-$white_color: #fff;
-$black_color: #7A7A7A ;
-$green_color: #4C9997 ;
-$gray_color : #A1A2AA ;
-$input_bg: #fafafa ;
-$border_color : rgba(122, 122, 122, 0.1) ;
+$global-color-primary: #4C9997 ;
+$global-color-secondary: #333645 ;
+$global-color-tertiary: #fafafa ;
+
+$global-color-text: #7A7A7A ;
+
+$global-color-white: #fff ;
+$global-color-black: #000 ;
+
+$global-color-border : rgba(122, 122, 122, 0.1) ;
 
 $desktop: 1024px ;
 $tablet: 898px;
@@ -27,8 +31,9 @@ $radius_percent: 3px ;
 @mixin fw(){
     display: inline;
     padding: 0 5px;
-    color: $green_color ;
+    color: $global-color-primary ;
 }
+
 @mixin noLinkStyle($color){
     text-decoration: none;
     color: $color;
@@ -37,16 +42,16 @@ $radius_percent: 3px ;
 @mixin footerList(){
     margin: 2rem 1rem ;
     font-size: $sm-font;
-    color: $black_color;
+    color: $global-color-text;
     ul {
         list-style-type: none;
         margin: 0;
         padding: 0;
         a {
-            @include noLinkStyle($black_color);
+            @include noLinkStyle($global-color-text);
             transition: color .5s;
             &:hover {
-                color: $green_color;
+                color: $global-color-primary;
             }
         }
     }
@@ -57,13 +62,16 @@ $radius_percent: 3px ;
     left: 50%;
     transform: translateX(-50%,0);
 }
+
 @mixin noListStyle(){
     list-style: none;
 }
-@mixin btn($backgroundColor,$hoverColor){
+
+@mixin btn($backgroundColor,$hoverColor,$hoverBorder:false){
     background-color: $backgroundColor;
     color: $hoverColor;
     border: none;
+    border-width: 1px;
     cursor: pointer;
     padding: .5rem 1rem;
     font-size: $sm-font ;
@@ -71,6 +79,9 @@ $radius_percent: 3px ;
     border-radius: $radius_percent;
     transition : color .3s , background-color .3s ;
     &:hover {
+        @if $hoverBorder {
+            border: 1px solid $backgroundColor;
+        }
         color: $backgroundColor;
         background-color: $hoverColor;
     }
@@ -86,7 +97,7 @@ $radius_percent: 3px ;
         min-width: $widthPercent;
         // & > * {}
         .form-label {
-            color: $gray_color;
+            color: $global-color-text;
             &:after {
                 content: "*";
                 color: red;
@@ -96,7 +107,7 @@ $radius_percent: 3px ;
         .form-input {
             border-radius: $radius_percent;
             border: none;
-            background-color: $input_bg; // input_bg
+            background-color: $global-color-tertiary;
             padding: 1rem 1.5rem;
         }  
     }
@@ -125,7 +136,7 @@ body, html {
 }
 
 p {
-    color: $gray_color;
+    color: $global-color-text; // used in order photos
 }
 button {
     font-family: "Cairo", Sans-serif;
@@ -147,7 +158,7 @@ header {
 
 @for $i from 1 through 3 {
     .h-sec-#{$i} {
-        border-bottom: 1px solid $border_color ;
+        border-bottom: 1px solid $global-color-border ;
         width: 100vw;
     }
 }
@@ -160,11 +171,11 @@ header {
     }
     
     .email a {
-        @include noLinkStyle($gray_color);
+        @include noLinkStyle($global-color-text);
         // background-color: #232323;
         // text-decoration: none;
         &:hover{
-            color: $green_color;
+            color: $global-color-primary;
         }
     }
 
@@ -178,15 +189,15 @@ header {
         .phones {
             order: 1;
             a {
-                @include noLinkStyle($green_color);
+                @include noLinkStyle($global-color-primary);
                 &:hover {
-                    color: $gray_color ;
+                    color: $global-color-text ;
                 }
             }
             li {
                 @include noListStyle();
                 font-weight: bold;
-                color: $green_color ;
+                color: $global-color-primary ;
             }
         }
     }
@@ -217,7 +228,7 @@ header {
     .logo-1 {
         display: flex;
         flex-direction: column;
-        color: $green_color;
+        color: $global-color-primary;
         span {
             font-size: .5rem;
             font-weight: bolder;
@@ -229,11 +240,11 @@ header {
         margin: 0;
         padding: 0 .2rem ;
         a {
-            @include noLinkStyle($gray_color);
+            @include noLinkStyle($global-color-text);
         }
 
         &:hover {
-            border-bottom: 2px solid $green_color;
+            border-bottom: 2px solid $global-color-primary;
         }
     }
 }
@@ -248,7 +259,7 @@ header {
         white-space: nowrap;
         background-color: #fff;
         z-index : 10 ;
-        color: $green_color ;
+        color: $global-color-primary ;
         font-size: $md-font;
     }
     .news-ribbon {
@@ -263,10 +274,10 @@ header {
         animation-timing-function: linear; // same speed
 
         a {
-            @include noLinkStyle($gray_color);
+            @include noLinkStyle($global-color-text);
         }
         .divider {
-            color: $green_color;
+            color: $global-color-primary;
             font-size: $md-font ;
             margin: 0 1rem ; 
         }
@@ -291,11 +302,11 @@ header {
 .body {
     .subject-container {
         
-        color: $white_color;
+        color: $global-color-white;
         min-height: 10vh;
         padding: 2rem 0;
         background-color: transparent;
-        background-image: linear-gradient(130deg , $green_color 71%, $green_color 97%);
+        background-image: linear-gradient(130deg , $global-color-primary 71%, $global-color-primary 97%);
         .subject-content {
             // padding-top: 2rem;
             text-align: center;
@@ -336,7 +347,7 @@ header {
                 justify-content: center;
                 @include inputs(40px);
                 button {
-                    @include btn($green_color,$white_color )
+                    @include btn($global-color-primary,$global-color-white,true )
                 }
             }
         }
@@ -357,7 +368,7 @@ header {
                 .order-num {
                     // flex-basis: 33.3333%;
                     // flex: 0 0 33.33333%;
-                    color: $green_color;
+                    color: $global-color-primary;
                     font-size: 2rem;
                     padding: 0 1rem;
                     padding-bottom: 1rem;
@@ -372,7 +383,7 @@ header {
                     margin: 0 1rem;
                     padding-bottom: 2rem;
                     h4 {
-                        color: $green_color;
+                        color: $global-color-primary;
                     }
                     img {
                         margin: 0;
@@ -401,7 +412,7 @@ footer {
         justify-content: space-around;
         min-height: 20vh;
         padding: .5rem 1rem;
-        background-color: $green_color;
+        background-color: $global-color-primary;
         
         .service-letter {
             width: 40%;
@@ -410,11 +421,11 @@ footer {
             white-space: nowrap;
             margin: 0 2rem;
             button {
-                @include btn($white_color,$black_color);
+                @include btn($global-color-white,$global-color-secondary);
             }
         }
 
-        color: $white_color;
+        color: $global-color-white;
         font-size: $lg-font;
     }
     .info > * {
@@ -432,7 +443,7 @@ footer {
 
         
         .title {
-            color: $green_color;
+            color: $global-color-primary;
         }
         .center-contact {
             // min-width: 20%;
@@ -481,8 +492,8 @@ footer {
 
     .copy-right {
         // background-color: yellowgreen;
-        border-top: 1px solid $border_color;
-        color: $green_color;
+        border-top: 1px solid $global-color-border;
+        color: $global-color-primary;
         display: flex;
         flex-direction: row;
         justify-content: space-between;
@@ -509,14 +520,11 @@ footer {
         display: inline;
         padding: 0 5px;
         cursor: pointer;
-        color: $green_color;
-        // &:hover {
-        //     color: $gray_color;
-        // }
+        color: $global-color-primary;
         a {
-            color: $green_color;
+            color: $global-color-primary;
             &:hover {
-                color: $gray_color;
+                color: $global-color-text;
             }
         }
     }
