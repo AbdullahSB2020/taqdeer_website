@@ -67,10 +67,15 @@ $radius_percent: 3px ;
     list-style: none;
 }
 
-@mixin btn($backgroundColor,$hoverColor,$hoverBorder:false){
+@mixin btn($backgroundColor,$hoverColor,$hoverBorder:false,$borderBeforeHover:false){
     background-color: $backgroundColor;
     color: $hoverColor;
-    border: 1px solid transparent;
+    @if $borderBeforeHover {
+        border: 1px solid $hoverColor;
+    }
+    @else {
+        border: 1px solid transparent;
+    }
     cursor: pointer;
     padding: .5rem 1rem;
     font-size: $sm-font ;
@@ -424,7 +429,6 @@ header {
 // =================================
 
 .body-landing {
-    // height: 70vh;
     .taqdeer-container {
         height: 50vh;
         width: 85vw;
@@ -442,13 +446,7 @@ header {
             flex-basis: 100%;
         }
 
-        .taqdeer-text {
-            .we-best {
-            }
-            .best-taqdeer {
-                color: $global-color-primary;
-            }
-            
+        .taqdeer-text {            
             .accident {
                 // background-color: red;
                 display: flex;
@@ -457,7 +455,7 @@ header {
                 }
                 button {
                     @include btn($global-color-primary,$global-color-white ,true);
-                    padding: 0 5px ;
+                    margin: 0 5px ;
                 }
             }
         }
@@ -466,7 +464,7 @@ header {
             justify-content: flex-end;
             margin: 0 3rem;
             img {
-                width: 80%;
+                width: 300px;
             }
             @include desktop(){
                 max-width: 50%;
@@ -474,7 +472,6 @@ header {
         }
     }
 
-    
     .easy-taqdeer {
        
         height: 70vh;
@@ -492,9 +489,9 @@ header {
             &>*{
                 width: 680px;
             }
-            .easy-desc {
+            #easy-desc {
                 // background-color: red;
-                // color: $global-color-secondary;
+                color: $global-color-secondary;
             }
             .easy-img-container{
                 margin: 30px 0 ;
@@ -517,6 +514,54 @@ header {
                     font-size: $sm-font;
                 }
             }
+        }
+    }
+
+    // height: 70vh;
+    .taqdeer-services {
+
+        text-align: center;
+        width: 700px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        // align-items: center;
+        // justify-content: center;
+        .services-images {
+            display: flex;
+            flex-direction: row;
+            // justify-content: space-between;
+            &>*{
+                flex-basis: 100%;
+            }
+            .services {
+                .services-desc{
+                    height: 150px;
+                    padding: 10px 10px;
+                    border-radius: 2rem;
+                    box-shadow: 0 0 20px 20px $global-color-tertiary;
+
+                }
+                display: flex;
+                flex-direction: row;
+                // align-items: center;
+                justify-content: space-around;
+                flex-wrap: wrap;
+                &>*{
+                    flex: 1 1 50%;
+                }
+            }
+        }
+        .services-btns > .btn1{
+            @include btn( $global-color-primary,$global-color-white, true,false);
+        }
+        .services-btns > .btn2{
+            @include btn($global-color-white, $global-color-primary, true,true);
+        }
+        .services-btns > button{
+            margin: 0 10px 20px;
+            // margin-bottom: 20px;
         }
     }
 }

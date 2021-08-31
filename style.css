@@ -326,9 +326,6 @@ header {
 .body-landing .taqdeer-container > * {
   flex-basis: 100%;
 }
-.body-landing .taqdeer-container .taqdeer-text .best-taqdeer {
-  color: #4C9997;
-}
 .body-landing .taqdeer-container .taqdeer-text .accident {
   display: flex;
 }
@@ -345,7 +342,7 @@ header {
   font-weight: bold;
   border-radius: 3px;
   transition: color 0.3s, background-color 0.3s;
-  padding: 0 5px;
+  margin: 0 5px;
 }
 .body-landing .taqdeer-container .taqdeer-text .accident button:hover {
   border: 1px solid #4C9997;
@@ -358,7 +355,7 @@ header {
   margin: 0 3rem;
 }
 .body-landing .taqdeer-container .taqdeer-img img {
-  width: 80%;
+  width: 300px;
 }
 @media (min-width: 898px) {
   .body-landing .taqdeer-container .taqdeer-img {
@@ -383,6 +380,9 @@ header {
 .body-landing .easy-taqdeer .inner-easy-taqdeer > * {
   width: 680px;
 }
+.body-landing .easy-taqdeer .inner-easy-taqdeer #easy-desc {
+  color: #333645;
+}
 .body-landing .easy-taqdeer .inner-easy-taqdeer .easy-img-container {
   margin: 30px 0;
   display: flex;
@@ -403,6 +403,71 @@ header {
   margin: 10px 0;
   width: 25px;
   font-size: 0.9rem;
+}
+.body-landing .taqdeer-services {
+  text-align: center;
+  width: 700px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+.body-landing .taqdeer-services .services-images {
+  display: flex;
+  flex-direction: row;
+}
+.body-landing .taqdeer-services .services-images > * {
+  flex-basis: 100%;
+}
+.body-landing .taqdeer-services .services-images .services {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.body-landing .taqdeer-services .services-images .services .services-desc {
+  height: 150px;
+  padding: 10px 10px;
+  border-radius: 2rem;
+  box-shadow: 0 0 20px 20px #fafafa;
+}
+.body-landing .taqdeer-services .services-images .services > * {
+  flex: 1 1 50%;
+}
+.body-landing .taqdeer-services .services-btns > .btn1 {
+  background-color: #4C9997;
+  color: #fff;
+  border: 1px solid transparent;
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem;
+  font-weight: bold;
+  border-radius: 3px;
+  transition: color 0.3s, background-color 0.3s;
+}
+.body-landing .taqdeer-services .services-btns > .btn1:hover {
+  border: 1px solid #4C9997;
+  color: #4C9997;
+  background-color: #fff;
+}
+.body-landing .taqdeer-services .services-btns > .btn2 {
+  background-color: #fff;
+  color: #4C9997;
+  border: 1px solid #4C9997;
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem;
+  font-weight: bold;
+  border-radius: 3px;
+  transition: color 0.3s, background-color 0.3s;
+}
+.body-landing .taqdeer-services .services-btns > .btn2:hover {
+  border: 1px solid #fff;
+  color: #fff;
+  background-color: #4C9997;
+}
+.body-landing .taqdeer-services .services-btns > button {
+  margin: 0 10px 20px;
 }
 
 footer .reserve-area {

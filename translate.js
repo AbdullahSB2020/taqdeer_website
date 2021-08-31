@@ -54,7 +54,8 @@ const translateFooter = (language) => {
     $('.copy-right').translate({lang: language, t: footerTranslate})
 }
 const translateBody = (language) => {
-    $('.body').translate({lang: language, t: bodyTranslate})
+    $('.body-request').translate({lang: language, t: bodyTranslate})
+    $('.body-landing').translate({lang: language, t: bodyTranslate})
 }
 const headerTranslate = {
     "Working Hours from 8 AM - 8 PM":{
@@ -152,6 +153,46 @@ const bodyTranslate = {
     },
     "Cost Value 172,5 riyal Payment by":{
         ar: "قيمة التكلفة 172,5 ريال الدفع عن طريق"
+    },
+    // LANDING PAGE TRANSLATION
+    "Because We":{
+        ar: "لأننا"
+    },
+    "Master Estimation Services":{
+        ar: "نتقن التقدير"
+    },
+    "We offer comprehensive vehicle services in an integrated manner that meets all needs and requirements Customers":{
+        ar: "نقدم خدمات شاملة للمركبات بشكلٍ متكامل<br>يلبي كافة احتياجات ومتطلبات العملاء"
+    },
+    "Exanimate Traffic Accident":{
+        ar: "تقدير حادث مروري"
+    },
+    "Exanimate Nejm Accident":{
+        ar: "تقدير حادث نجم"
+    },
+    "Taqdeer":{
+        ar: "تقدير"
+    },
+    "Easy":{
+        ar: "ولا أسهل"
+    },
+    "Estimate":{
+        ar: "تقدير"
+    },
+    "Because we care about you and guarantee fast service and high quality":{
+        ar: "لأننا نهتم بك, ونضمن لك الخدمة السريعة والجودة العالية"
+    },
+    "The Cartech Center provides a vehicle accident damage assessment service at the hands of accredited evaluators, as it contributes to shortening and facilitating vehicle damage assessment procedures, raising the level of professionalism in assessment reports and controlling them in a manner that preserves the rights of all parties. Therefore, an assessment system worked on automating the procedures and converting them from 18 paper steps In several locations to 3 steps in one center, through which the beneficiary can finish all the assessment processes in his visit to the assessment center and send his reports to the insurance company.":{
+        ar: "يقدم مركز كارتك خدمة تقدير أضرار حوادث المركبات على أيدي مقيّمين معتمدين من قبل الهيئة السعودية للمقيّمين المعتمدين, حيث يسهم في اختصار وتسهيل إجراءات تقدير أضرار المركبات, ورفع مستوى المهنيّة في تقارير التقدير وضبطها بما يحفظ حقوق جميع الأطراف, لذلك عملت (منظومة تقدير) على أتمتة الإجراءات وتحويلها من 18 خطوة ورقية في عدة مواقع إلى 3 خطوات في مركز واحد, يستطيع المستفيد من خلاله إنهاء جميع عمليات التقدير في زيارته لمركز التقدير وإرسال تقاريره لشركة التأمين ."
+    },
+    "Receive Beneficiaries":{
+        ar: "استقبال المستفيدين"
+    },
+    "Check and Estimate Damages":{
+        ar: "فحص و تقدير الأضرار"
+    },
+    "Report and Send to Insurance Company":{
+        ar: "إصدار التقرير و إرساله لشركات التأمين"
     },
     "":{
         ar: ""

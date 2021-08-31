@@ -22,6 +22,11 @@ const twitterLink = `#`
 const instagramLink = `#`
 const youtubeLink = `#`
 
+/// LANDING PAGE
+const easyImage1 = '/assets/images/Mask-Group-1.png'
+const easyImage2 = '/assets/images/Mask-Group-2.png'
+const easyImage3 = '/assets/images/Mask-Group-3.png'
+
 /**
  * object => SRC => {value}
  * object => HREF => {value}
@@ -153,7 +158,32 @@ let content = {
                     Pay:`<img src="${order3Pay}" alt="" width="200">`,
                 },
             }
-        }
+        },
+        // LANDING PAGE CONTENT
+        TaqdeerContainer: {
+            Header1: `Taqdeer`,
+            Header21:`Because We`,
+            Header22:`Master Estimation Services`,
+            Desc: `We offer comprehensive vehicle services in an integrated manner that meets all needs and requirements Customers`,
+            Najm: `Exanimate Nejm Accident`,
+            Traffic:`Exanimate Traffic Accident`,
+        },
+        EasyTaqdeer: {
+            Header11:`Estimate`,
+            Header12:`Easy`,
+            SmallP:`Because we care about you and guarantee fast service and high quality`,
+            Desc:`The Cartech Center provides a vehicle accident damage assessment service at the hands of accredited evaluators, as it contributes to shortening and facilitating vehicle damage assessment procedures, raising the level of professionalism in assessment reports and controlling them in a manner that preserves the rights of all parties. Therefore, an assessment system worked on automating the procedures and converting them from 18 paper steps In several locations to 3 steps in one center, through which the beneficiary can finish all the assessment processes in his visit to the assessment center and send his reports to the insurance company.`,
+            Clients: `Receive Beneficiaries`,
+            ClientsImg: `<img src="${easyImage1}" width="40">`,
+            Damage:`Check and Estimate Damages`,
+            DamageImg:`<img src="${easyImage2}" width="40">`,
+            Report: `Report and Send to Insurance Company`,
+            ReportImg: `<img src="${easyImage3}" width="40">`,
+        },
+        TaqdeerServices: {
+
+        },
+
     }, 
     // FooterReserveAreaLetter
     Footer : {
