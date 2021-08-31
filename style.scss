@@ -275,9 +275,10 @@ header {
 }
 
 // =================================
-// ========= body sytles =========
+// == TAQDEER REQUEST PAGE STYLES ==
 // =================================
-.body {
+.body-request {
+    
     .subject-container {
         
         color: $global-color-white;
@@ -418,7 +419,107 @@ header {
         }
     }
 }
+// =================================
+// == TAQDEER REQUEST PAGE STYLES ==
+// =================================
 
+.body-landing {
+    // height: 70vh;
+    .taqdeer-container {
+        height: 50vh;
+        width: 85vw;
+        margin: 0 auto;
+        // background-color: red; // remove afterwards
+        background-image: url(/assets/images/id-copy.png);
+        background-size: 80%;
+        background-repeat: no-repeat;
+        background-position: center center;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+        &>*{
+            flex-basis: 100%;
+        }
+
+        .taqdeer-text {
+            .we-best {
+            }
+            .best-taqdeer {
+                color: $global-color-primary;
+            }
+            
+            .accident {
+                // background-color: red;
+                display: flex;
+                & >*{
+                    margin-left: 10px;
+                }
+                button {
+                    @include btn($global-color-primary,$global-color-white ,true);
+                    padding: 0 5px ;
+                }
+            }
+        }
+        .taqdeer-img{
+            display: flex;
+            justify-content: flex-end;
+            margin: 0 3rem;
+            img {
+                width: 80%;
+            }
+            @include desktop(){
+                max-width: 50%;
+            }
+        }
+    }
+
+    
+    .easy-taqdeer {
+       
+        height: 70vh;
+        background-color: $global-color-tertiary;
+        background-image: url(/assets/images/image-1-tran.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center center;
+        .inner-easy-taqdeer{
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            &>*{
+                width: 680px;
+            }
+            .easy-desc {
+                // background-color: red;
+                // color: $global-color-secondary;
+            }
+            .easy-img-container{
+                margin: 30px 0 ;
+                display: flex;
+                flex-direction: row;
+                .easy-img {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                }
+                &>*{
+                    flex-basis: 100%;
+                }
+                .bubble-num{
+                    background-color: $global-color-primary;
+                    color: $global-color-white;
+                    border-radius: 50px;
+                    margin: 10px 0;
+                    width: 25px;
+                    font-size: $sm-font;
+                }
+            }
+        }
+    }
+}
 
 // =================================
 // ========= footer sytles =========
@@ -549,4 +650,11 @@ footer {
             }
         }
     }
+}
+.black-text {
+    color: $global-color-secondary;
+}
+
+.primary-text {
+    color: $global-color-primary;
 }
