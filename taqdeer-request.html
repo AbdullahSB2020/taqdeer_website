@@ -83,7 +83,8 @@
         <div class="body">
             <div class="subject-container">
                 <div class="subject-content">
-                    <h1 class="trn">طلب خدمة تقدير</h1><span class="trn">حجز موعد</span>
+                    <h1 id="BodySubjectContainerTitle" class="trn"></h1>
+                    <span id="BodySubjectContainerBook" class="trn"></span>
                 </div>
                 <div class="subject-background">
                     <!-- <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#fff" fill-opacity="1" d="M0,192L48,208C96,224,192,256,288,240C384,224,480,160,576,133.3C672,107,768,117,864,149.3C960,181,1056,235,1152,240C1248,245,1344,203,1392,181.3L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg> -->
@@ -96,40 +97,56 @@
                     <form class="request-inner" action="#">
                         <!-- add the form here -->
                         <div class="form-group"> 
-                            <label class="form-label" for="">Name:</label>
+                            <label class="form-label" for=""><span id="BodyContentRequestName" class="trn"></span></label>
                             <input class="form-input" type="text" name="" id="">
                         </div>
 
                         <div class="form-group"> 
-                            <label class="form-label" for="">Phone:</label>
+                            <label class="form-label" for=""><span id="BodyContentRequestPhone" class="trn"></span></label>
                             <input class="form-input" type="text" name="" id="">
                         </div>
-                        <div class="form-group"> 
-                            <label class="form-label" for="">Accident Number</label>
-                            <input class="form-input" type="text" name="" id="">
+                        <div class="form-group spec"> 
+                            <label class="form-label" for=""><span id="BodyContentRequestAccNumber" class="trn"></span></label>
+                            <input class="form-input" type="number" name="" id="">
                         </div>
                         <div class="form-group"> 
-                            <label class="form-label" for="">Plate Characters</label>
-                            <input class="form-input" type="text" name="" id="">
+                            <label class="form-label" for=""><span id="BodyContentRequestPlateChar" class="trn"></span></label>
+                            <input class="form-input" type="text" name="BodyContentRequest" id="">
                         </div>
                         <div class="form-group"> 
-                            <label class="form-label" for="">Plate Number</label>
-                            <input class="form-input" type="text" name="" id="">
+                            <label class="form-label" for=""><span id="BodyContentRequestPlateNum" class="trn"></span></label>
+                            <input class="form-input" type="number" name="" id="">
                         </div>
                         <div class="form-group"> 
-                            <label class="form-label" for="">Appointment Date</label>
-                            <input class="form-input" type="text" name="" id="">
+                            <label class="form-label" for=""><span id="BodyContentRequestAppointDate" class="trn"></span></label>
+                            <input class="form-input" type="date" name="" id="">
                         </div>
                         <div class="form-group"> 
-                            <label class="form-label" for="">Appointment Time</label>
+                            <label class="form-label" for=""><span id="BodyContentRequestAppointTime" class="trn"></span></label>
                             <input class="form-input" type="text" name="" id="">
+                            
+                            <!-- <div class="appointment-time">
+                                <select name="appointment_time" id="">
+                                    <option value="10:00">10:00</option>
+                                    <option value="10:00">10:00</option>
+                                    <option value="10:00">10:00</option>
+                                    <option value="10:00">10:00</option>
+                                    <option value="10:00">10:00</option>
+                                    <option value="10:00">10:00</option>
+                                </select>
+                            </div> -->
                         </div>
-                        <div class="form-group"> 
-                            <label class="form-label" for="">Service Location</label>
-                            <input class="form-input" type="text" name="" id="">
+                        <div class="form-group spec"> 
+                            <label class="form-label" for=""><span id="BodyContentRequestServLoc" class="trn"></span></label>
+                            <div class="service-location">
+                                <input type="radio" name="service_location">
+                                <label for=""><span id="BodyContentRequestServLoc1" class="trn"></span></label>
+                                <input type="radio" name="service_location">
+                                <label for=""><span id="BodyContentRequestServLoc2" class="trn"></span></label>
+                            </div>
                         </div>
-                        <div class="form-group"> 
-                            <button type="submit"> Send >></button>
+                        <div class="form-group spec"> 
+                            <button type="submit"><span id="BodyContentRequestSend" class="trn"></span> >></button>
                         </div>
                     </form>
                 </div>
@@ -138,27 +155,27 @@
                 <div class="steps">
                     <div class="step">
                         <div class="order-num">1</div>
-                        <div class="order-img"><img src="/assets/images/order-1.png" width="100"></div>
+                        <div id="BodyContentStepsStep1Img" class="order-img"></div>
                         <div class="order-desc">
-                            <h4><span class="trn">Before Appointment</span></h4>
-                            <p><span class="trn">At least 15 minutes early</span></p>
+                            <h4><span id="BodyContentStepsStep1Title" class="trn"></span></h4>
+                            <p><span id="BodyContentStepsStep1Desc" class="trn"></span></p>
                         </div>
                     </div>
                     <div class="step">
                         <div class="order-num">2</div>
-                        <div class="order-img"><img src="/assets/images/order-2.png" width="100"></div>
+                        <div id="BodyContentStepsStep2Img" class="order-img"></div>
                         <div class="order-desc">
-                            <h4><span class="trn">Estimation Requirements</span></h4>
-                            <p><span class="trn">Vehicle Form – Vehicle Estimation Request</span></p>
+                            <h4><span id="BodyContentStepsStep2Title" class="trn"></span></h4>
+                            <p><span id="BodyContentStepsStep2Desc" class="trn"></span></p>
                         </div>
                     </div>
                     <div class="step">
                         <div class="order-num">3</div>
-                        <div class="order-img"><img src="/assets/images/order-3.png" width="100" ></div>
+                        <div id="BodyContentStepsStep3Img" class="order-img"></div>
                         <div class="order-desc">
-                                <h4><span class="trn">Cost</span></h4>
-                                <p><span class="trn">Cost Value 172,5 riyal Payment by</span></p>
-                                <img src="/assets/images/order-3-1.png" alt="" width="200">
+                                <h4><span id="BodyContentStepsStep3Title" class="trn"></span></h4>
+                                <p><span id="BodyContentStepsStep3Desc" class="trn"></span></p>
+                                <span id="BodyContentStepsStep3Pay"></span>
                         </div>
                     </div>
                 </div>

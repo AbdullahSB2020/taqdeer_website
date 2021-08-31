@@ -3,6 +3,13 @@ const whatsMobile = `0112414088`;
 const email = `info@cartech.sa`;
 const companyLogoSrc = '/assets/images/logo-1.png'
 
+// ORDER IMAGES
+const order1 = `/assets/images/order-1.png`
+const order2 = `/assets/images/order-2.png`
+const order3 = `/assets/images/order-3.png`
+const order3Pay = `/assets/images/order-3-1.png`
+
+// CENTER PHOTOS
 const centerImage1 = `/assets/images/center-photos/1.jpg`
 const centerImage2 = `/assets/images/center-photos/2.jpg`
 const centerImage3 = `/assets/images/center-photos/3.jpg`
@@ -110,7 +117,43 @@ let content = {
         },
     },
     Body: {
-
+        SubjectContainer:{
+            Title: `Request An Estimation Service`,
+            Book:`Book An Appointment`,
+        },
+        Content: {
+            Request: {
+                Name:`Name`,
+                Phone:`Phone`,
+                AccNumber:`Accident Number`,
+                PlateChar:`Plate Characters`,
+                PlateNum:`Plate Number`,
+                AppointDate:`Appointment Date`,
+                AppointTime:`Appointment Time`,
+                ServLoc: `Service Location`,
+                ServLoc1: `Indoor`,
+                ServLoc2: `In Client Location`,
+                Send: `Send`,
+            },
+            Steps: {
+                Step1:{
+                    Img:`<img src="${order1}" width="100">`,
+                    Title:`Before Appointment`,
+                    Desc:`At least 15 minutes early`,
+                },
+                Step2:{
+                    Img:`<img src="${order2}" width="100">`,
+                    Title:`Estimation Requirements`,
+                    Desc:`Vehicle Form – Vehicle Estimation Request`,
+                },
+                Step3:{
+                    Img:`<img src="${order3}" width="100">`,
+                    Title:`Cost`,
+                    Desc:`Cost Value 172,5 riyal Payment by`,
+                    Pay:`<img src="${order3Pay}" alt="" width="200">`,
+                },
+            }
+        }
     }, 
     // FooterReserveAreaLetter
     Footer : {

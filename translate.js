@@ -1,41 +1,43 @@
 // lang btn on click
 window.onload = () => {
 
-    let langBtn = document.getElementById('lang'); 
+    let langBtn = document.getElementById('lang')
     langBtn.onclick = (e) => {
-        translateAll();
+        translateAll()
     }
     copyContentIntoDom(content, '')
-    translateAll();
+    translateAll()
 }
 
 localStorage.setItem('lang','en','365')
 
 const translateAll = () => {
-    let langBtn = document.getElementById('lang'); 
+    let langBtn = document.getElementById('lang')
 
-    let language = localStorage.getItem('lang');
-    console.log('langeua is ', language);
+    let language = localStorage.getItem('lang')
+    console.log('langeua is ', language)
 
     if(language == 'ar'){
-        language = 'en'; 
+        language = 'en'
         localStorage.setItem('lang',language,'365')
         document.getElementsByTagName('html')[0].setAttribute('lang',language) 
         document.getElementsByTagName('html')[0].setAttribute('dir','ltr')
         langBtn.innerHTML = '<a href="#"><img src="/assets/images/ar.png" alt="" width="13"> العربية</a>'
-        translateHeader(language);
-        translateFooter(language);
+        translateHeader(language)
+        translateFooter(language)
+        translateBody(language)
         // show arabic letter with العربية as text
     } else if(language == 'en') {
-        language = 'ar'; 
+        language = 'ar'
         
         localStorage.setItem('lang',language,'365')
 
         document.getElementsByTagName('html')[0].setAttribute('lang',language) 
         document.getElementsByTagName('html')[0].setAttribute('dir','rtl')
         langBtn.innerHTML =  '<a href="#"><img src="/assets/images/en.png" alt="" width="13"> English</a>'
-        translateHeader(language);
-        translateFooter(language);
+        translateHeader(language)
+        translateFooter(language)
+        translateBody(language)
     }
 }
 
@@ -50,6 +52,9 @@ const translateFooter = (language) => {
     $('.reserve-area').translate({lang: language, t: footerTranslate})
     $('.info').translate({lang: language, t: footerTranslate})
     $('.copy-right').translate({lang: language, t: footerTranslate})
+}
+const translateBody = (language) => {
+    $('.body').translate({lang: language, t: bodyTranslate})
 }
 const headerTranslate = {
     "Working Hours from 8 AM - 8 PM":{
@@ -87,6 +92,95 @@ const headerTranslate = {
         ar: ""
     },
     
+}
+
+const bodyTranslate = {
+    "Request An Estimation Service":{
+        ar: "طلب خدمة تقدير"
+    },
+    "Book An Appointment":{
+        ar: "حجز موعد"
+    },
+    "Name":{
+        ar: "الاسم"
+    },
+    "Phone":{
+        ar: "الهاتف"
+    },
+    "Accident Number":{
+        ar: "رقم الحادث"
+    },
+    "Plate Characters":{
+        ar: "حروف اللوحة"
+    },
+    "Plate Number":{
+        ar: "رقم اللوحة"
+    },
+    "Appointment Date":{
+        ar: "تاريخ الموعد"
+    },
+    "Appointment Time":{
+        ar: "وقت الموعد"
+    },
+    "Service Location":{
+        ar: "موقع الخدمة"
+    },
+    "Indoor":{
+        ar: "داخل المركز"
+    },
+    "In Client Location":{
+        ar: "التقدير في موقع العميل"
+    },
+    "Send":{
+        ar: "إرسال"
+    },
+    // ORDER STEPS
+    "Before Appointment":{
+        ar: "قبل الموعد"
+    },
+    "At least 15 minutes early":{
+        ar: "الحضور مبكرا بربع ساعة على الأقل"
+    },
+    "Estimation Requirements":{
+        ar: "متطلبات التقدير"
+    },
+    "Vehicle Form – Vehicle Estimation Request":{
+        ar: "استمارة المركبة – طلب تقدير المركبة"
+    },
+    "Cost":{
+        ar: "التكلفة"
+    },
+    "Cost Value 172,5 riyal Payment by":{
+        ar: "قيمة التكلفة 172,5 ريال الدفع عن طريق"
+    },
+    "":{
+        ar: ""
+    },
+    "":{
+        ar: ""
+    },
+    "":{
+        ar: ""
+    },
+    "":{
+        ar: ""
+    },
+    "":{
+        ar: ""
+    },
+    "":{
+        ar: ""
+    },
+    "":{
+        ar: ""
+    },
+    "":{
+        ar: ""
+    },
+    "":{
+        ar: ""
+    },
+     
 }
 
 const footerTranslate = {
