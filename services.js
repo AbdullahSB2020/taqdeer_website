@@ -172,7 +172,11 @@ let content = {
             Header11:`Estimate`,
             Header12:`Easy`,
             SmallP:`Because we care about you and guarantee fast service and high quality`,
-            Desc:`The Cartech Center provides a vehicle accident damage assessment service at the hands of accredited evaluators, as it contributes to shortening and facilitating vehicle damage assessment procedures, raising the level of professionalism in assessment reports and controlling them in a manner that preserves the rights of all parties. Therefore, an assessment system worked on automating the procedures and converting them from 18 paper steps In several locations to 3 steps in one center, through which the beneficiary can finish all the assessment processes in his visit to the assessment center and send his reports to the insurance company.`,
+            Desc1:`The Cartech Center provides a vehicle accident damage assessment service at the hands of accredited evaluators, `,
+            Desc2:`as it contributes to shortening and facilitating vehicle damage assessment procedures, `,
+            Desc3:`raising the level of professionalism in assessment reports and controlling them in a manner that preserves the rights of all parties. `,
+            Desc4:`Therefore, an assessment system worked on automating the procedures and converting them from 18 paper steps In several locations to 3 steps in one center,`,
+            Desc5:`through which the beneficiary can finish all the assessment processes in his visit to the assessment center and send his reports to the insurance company.`,
             Clients: `Receive Beneficiaries`,
             ClientsImg: `<img src="${easyImage1}" width="40">`,
             Damage:`Check and Estimate Damages`,
@@ -181,7 +185,22 @@ let content = {
             ReportImg: `<img src="${easyImage3}" width="40">`,
         },
         TaqdeerServices: {
-
+            Header11:`We offer comprehensive and guaranteed`,
+            Header12:`Recognition Services`,
+            Desc: `We provide our customers with comprehensive and distinctive services that are professionally implemented to keep pace Saudi market aspirations and customer needs`,
+            Estimate: `<img src="/assets/images/Mask-Group-28.png" width="80">`,
+            EstimateImg: `Moving Estimation`,
+            Damage:`<img src="/assets/images/Mask-Group-29.png" width="80">`,
+            DamageImg:`Estimate Vehicle Damage`,
+            Safety:`<img src="/assets/images/Mask-Group-30.png" width="80">`,
+            SafetyImg:`Vehicle Safety Check`,
+            Claim:`<img src="/assets/images/Mask-Group-31.png" width="80">`,
+            ClaimImg:`Electronic Claim`,
+            // CAR IMAGE
+            CarImage:`<img src="/assets/images/Component.png" alt="">`,
+            // BUTTONS
+            Request: `Request Estimation`,
+            AllService: `All Services`,
         },
 
     }, 

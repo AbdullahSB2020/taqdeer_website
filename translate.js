@@ -182,9 +182,26 @@ const bodyTranslate = {
     "Because we care about you and guarantee fast service and high quality":{
         ar: "لأننا نهتم بك, ونضمن لك الخدمة السريعة والجودة العالية"
     },
-    "The Cartech Center provides a vehicle accident damage assessment service at the hands of accredited evaluators, as it contributes to shortening and facilitating vehicle damage assessment procedures, raising the level of professionalism in assessment reports and controlling them in a manner that preserves the rights of all parties. Therefore, an assessment system worked on automating the procedures and converting them from 18 paper steps In several locations to 3 steps in one center, through which the beneficiary can finish all the assessment processes in his visit to the assessment center and send his reports to the insurance company.":{
-        ar: "يقدم مركز كارتك خدمة تقدير أضرار حوادث المركبات على أيدي مقيّمين معتمدين من قبل الهيئة السعودية للمقيّمين المعتمدين, حيث يسهم في اختصار وتسهيل إجراءات تقدير أضرار المركبات, ورفع مستوى المهنيّة في تقارير التقدير وضبطها بما يحفظ حقوق جميع الأطراف, لذلك عملت (منظومة تقدير) على أتمتة الإجراءات وتحويلها من 18 خطوة ورقية في عدة مواقع إلى 3 خطوات في مركز واحد, يستطيع المستفيد من خلاله إنهاء جميع عمليات التقدير في زيارته لمركز التقدير وإرسال تقاريره لشركة التأمين ."
+    "The Cartech Center provides a vehicle accident damage assessment service at the hands of accredited evaluators, as it contributes to shortening and facilitating vehicle damage assessment procedures, raising the level of professionalism in assessment reports and controlling them in a manner that preserves the rights of all parties. Therefore, an assessment system worked on automating the procedures and converting them from 18 paper steps In several locations to 3 steps in one center, through which the beneficiary can finish all the assessment processes in his visit to the assessment center and send his reports to the insurance company":{
+        ar: "ن ."
     },
+    /// start
+    "The Cartech Center provides a vehicle accident damage assessment service at the hands of accredited evaluators, ":{
+        ar:`يقدم مركز كارتك خدمة تقدير`,
+    },
+    "as it contributes to shortening and facilitating vehicle damage assessment procedures, ":{
+        ar:` أضرار حوادث المركبات على أيدي مقيّمين معتمدين من قبل الهيئة السعودية للمقيّمين المعتمدين, حيث يسهم في اختصار`,
+    },
+    "raising the level of professionalism in assessment reports and controlling them in a manner that preserves the rights of all parties. ":{
+        ar:` وتسهيل إجراءات تقدير أضرار المركبات, ورفع مستوى المهنيّة في تقارير التقدير وضبطها بما يحفظ حقوق جميع الأطراف,`,
+    },
+    "Therefore, an assessment system worked on automating the procedures and converting them from 18 paper steps In several locations to 3 steps in one center,":{
+        ar:` لذلك عملت (منظومة تقدير) على أتمتة الإجراءات وتحويلها من 18 خطوة ورقية في عدة مواقع إلى 3 خطوات في مركز واحد,`,
+    },
+    "through which the beneficiary can finish all the assessment processes in his visit to the assessment center and send his reports to the insurance company.":{
+        ar:` يستطيع المستفيد من خلاله إنهاء جميع عمليات التقدير في زيارته لمركز التقدير وإرسال تقاريره لشركة التأمين`,
+    },
+    
     "Receive Beneficiaries":{
         ar: "استقبال المستفيدين"
     },
