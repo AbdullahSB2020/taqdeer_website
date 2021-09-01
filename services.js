@@ -325,7 +325,6 @@ let content = {
  * object => SRC => {value}
  * object => HREF => {value}
  * always parent of (src or href) will be id of element
- *  
  */
 function copyContentIntoDom(object,idBuilder){
     if(Object.keys(object).length == 0 || typeof(object) !== "object" ) return ;
@@ -336,29 +335,13 @@ function copyContentIntoDom(object,idBuilder){
             // here I can modify the object to be src to add images to image
             // in case something is nested will add two ids one for src another one for href
 
-            // console.log(idPath)
-            // console.log(Object.keys(object)[0])
-            // if(idPath.includes('HREF')) {
-            //     console.log('%cThere is a match', 'font-size:22px;color:yellow');
-            //     let elementId = idPath.replace('HREF','') // to get id
-            //     console.log(idPath)
-            //     // console.log(elementId)
-            //     // console.log('HREF',elementId)
-
-            //     // console.log(object[child])
-            //     if(document.getElementById(elementId) )console.log(`%celement exist`,'font-size:20px; color:green;');
-            //         // document.getElementById(elementId).href = object[child];
-            //     else console.log(`%celement doesn't exist`,'font-size:20px;color:#c87654')
-            // }
             if(document.getElementById(idPath)){
                 document.getElementById(idPath).innerHTML = object[child];
             }
             else if(Object.keys(object)[0] === 'SRC'){
                 // get id and make object[child] its src
                 let elementId = idPath.replace('SRC','') // to get id
-                // console.log('SRC',elementId)
 
-                // console.log(object[child])
                 if( document.getElementById(elementId))
                     document.getElementById(elementId).src = object[child];
                 else console.log(`%celement doesn't exist`,'font-size:20px')
@@ -366,17 +349,18 @@ function copyContentIntoDom(object,idBuilder){
             } else if (Object.keys(object)[0] === 'HREF'){
                 // get id and make object[child] its href
                 let elementId = idPath.replace('HREF','') // to get id
-                console.log(elementId)
-                // console.log('HREF',elementId)
 
-                // console.log(object[child])
                 if(document.getElementById(elementId))
                     document.getElementById(elementId).href = object[child];
                 else console.log(`%celement doesn't exist`,'font-size:20px;color:#c87654')
             }
-            // console.log(idPath)
             idPath = ''
         }
         copyContentIntoDom(object[child],idPath)
     }
+}
+
+function redirectToEstimate(){
+    window.location.replace("/taqdeer-request.html");
+    // window.location.replace("http://www.w3schools.com");
 }
