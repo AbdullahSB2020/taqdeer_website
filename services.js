@@ -27,6 +27,8 @@ const easyImage1 = '/assets/images/Mask-Group-1.png'
 const easyImage2 = '/assets/images/Mask-Group-2.png'
 const easyImage3 = '/assets/images/Mask-Group-3.png'
 
+const requestPageLink = `/taqdeer-request.html`;
+
 /**
  * object => SRC => {value}
  * object => HREF => {value}
@@ -166,7 +168,13 @@ let content = {
             Header22:`Master Estimation Services`,
             Desc: `We offer comprehensive vehicle services in an integrated manner that meets all needs and requirements Customers`,
             Najm: `Exanimate Nejm Accident`,
+            NajmHref: {
+                HREF:`${requestPageLink}`,
+            },
             Traffic:`Exanimate Traffic Accident`,
+            TrafficHref: {
+                HREF:`${requestPageLink}`,
+            }
         },
         EasyTaqdeer: {
             Header11:`Estimate`,
@@ -200,7 +208,13 @@ let content = {
             CarImage:`<img src="/assets/images/Component.png" alt="">`,
             // BUTTONS
             Request: `Request Estimation`,
+            RequestHref : {
+                HREF:`${requestPageLink}`,
+            },
             AllService: `All Services`,
+            AllServiceHref: {
+                HREF:`#`,
+            },
         },
 
     }, 
@@ -209,6 +223,9 @@ let content = {
         ReserveArea: {
             Letter: `We provide our customers with comprehensive and professional services`,
             Appointment: `Book Examination Service Appointment`,
+            AppointmentHref: {
+                HREF:  `${requestPageLink}`,
+            },
         },
         Info: {
             CenterContact: {

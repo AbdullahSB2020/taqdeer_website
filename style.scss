@@ -68,6 +68,7 @@ $radius_percent: 3px ;
 
 @mixin btn($backgroundColor,$hoverColor,$hoverBorder:false,$borderBeforeHover:false){
     background-color: $backgroundColor;
+    text-decoration: none;
     color: $hoverColor;
     @if $borderBeforeHover {
         border: 1px solid $hoverColor;
@@ -431,7 +432,7 @@ header {
                 & >*{
                     margin-left: 10px;
                 }
-                button {
+                a {
                     @include btn($global-color-primary,$global-color-white ,true);
                     margin: 0 5px ;
                 }
@@ -532,14 +533,14 @@ header {
                 }
             }
         }
-        .services-btns > .btn1{
+        .services-btns > .a1{
             @include btn( $global-color-primary,$global-color-white, true,false);
         }
-        .services-btns > .btn2{
+        .services-btns > .a2{
             @include btn($global-color-white, $global-color-primary, true,true);
         }
-        .services-btns > button{
-            margin: 0 10px 20px;
+        .services-btns {
+            margin: 0 10px 30px;
         }
     }
 }
@@ -565,7 +566,7 @@ footer {
         .appointment {
             white-space: nowrap;
             margin: 0 2rem;
-            button {
+            a {
                 @include btn($global-color-white,$global-color-secondary);
             }
         }
